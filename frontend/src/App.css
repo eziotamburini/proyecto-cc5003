@@ -40,3 +40,97 @@
 .read-the-docs {
   color: #888;
 }
+
+/* begin custom CSS */
+
+.store-list-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.store-list {
+  list-style: none;
+  padding: 0;
+}
+
+.store-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: #f9f9f9;
+}
+
+.store-item h2 {
+  margin: 0 0 8px 0;
+  color: #333;
+}
+
+.store-item p {
+  margin: 0 0 8px 0;
+  color: #666;
+}
+
+.location {
+  font-style: italic;
+  color: #555;
+}
+
+.category {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  color: #888;
+}
+
+.junaeb {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.error {
+  color: red;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+.star.full {
+  color: #ffd700;
+}
+
+.star.half {
+  color: #ffd700;
+}
+
+.star.empty {
+  color: #ddd;
+}
+
+.numeric-rating {
+  font-weight: bold;
+  color: #007bff;
+  font-size: 0.9em;
+}

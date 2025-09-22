@@ -2,7 +2,7 @@
   "stores": [
     {
       "id": 1,
-      "storeCategory": "VendingMachine",
+      "storeCategory": "Máquina Expendedora",
       "name": "Máquina Monster",
       "description": "Máquina expendedora de bebidas energéticas Monster.",
       "location": "Patio de 851, cerca de la entrada",
@@ -20,7 +20,7 @@
     },
     {
       "id": 3,
-      "storeCategory": "Cafeteria",
+      "storeCategory": "Cafetería",
       "name": "Cafeta",
       "description": "Cafetería universitaria con opciones de comida rápida y saludable.",
       "location": "Beauchef 850, piso -1, cerca del patio central",
@@ -29,7 +29,7 @@
     },
     {
       "id": 4,
-      "storeCategory": "FoodTruck",
+      "storeCategory": "Food Truck",
       "name": "Abuelita Yoli",
       "description": "Carrito de comida rápida, aceptamos junaeb.",
       "location": "Patio de 850, junto a la entrada principal",
@@ -38,7 +38,7 @@
     },
     {
       "id": 5,
-      "storeCategory": "Restaurant",
+      "storeCategory": "Restaurante",
       "name": "Subway",
       "description": "Cadena internacional de sándwiches personalizados.",
       "location": "Tupper 2103",
