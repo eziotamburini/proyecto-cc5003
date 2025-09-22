@@ -17,12 +17,14 @@ El proyecto está dividido en dos carpetas principales: `backend` (servidor mock
 
 ### Opción 1: Usar el script de inicio (recomendado)
 
-1. Abre una terminal en la raíz del proyecto (donde está este README.md).
-2. Dale permisos de ejecución al script:
+1. **Abre una terminal en la raíz del proyecto (donde está este README.md).**
+2. **Dale permisos de ejecución al script:**
+   
    ```bash
    chmod +x start.sh
    ```
-3. Ejecuta el script:
+4. **Ejecuta el script:**
+   
    ```bash
    ./start.sh
    ```
