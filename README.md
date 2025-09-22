@@ -1,4 +1,8 @@
+<div style="text-align: center;">
+
 # 🌯🍝🍟 BeaucheFoods 🥗🍔🍕
+
+</div>
 
 Proyecto para el curso de Aplicaciones Web Reactivas (CC5003), semestre Primavera 2025.
 
