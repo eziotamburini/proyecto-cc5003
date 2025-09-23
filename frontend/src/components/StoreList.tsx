@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react";
 import server from "../services/server";
 import type { StoreWithRating } from "../types/types";
 
-const StoreList: React.FC = () => {
+interface StoreListProps {
+  onStoreSelect: (storeId: number) => void;
+}
+
+const StoreList: React.FC<StoreListProps> = ({ onStoreSelect }) => {
   const [stores, setStores] = useState<StoreWithRating[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -57,10 +61,30 @@ const StoreList: React.FC = () => {
       <h1>🌯🍝🍟 BeaucheFoods 🥗🍔🍕</h1>
       <ul className="store-list">
         {stores.map((store) => (
-          <li key={store.id} className="store-item">
+          <li 
+            key={store.id} 
+            className="store-item"
+            onClick={() => onStoreSelect(store.id)}
+            style={{ cursor: 'pointer' }}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                onStoreSelect(store.id);
+              }
+            }}
+          >
+            <img
+                src={store.images[0]}
+                className="image"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = "/images/placeholder.png";
+                }}
+              />
             <h2>{store.name}</h2>
             {store.description && <p>{store.description}</p>}
-            <p className="location">Ubicación: {store.location}</p>
+            <p className="location"> 📍 Ubicación: {store.location}</p>
             <p className="category">Tipo: {store.storeCategory}</p>
             <p className={store.junaeb ? "junaeb" : ""}>
               {store.junaeb ? "Acepta Junaeb" : "No Acepta Junaeb 😔"}

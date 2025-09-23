@@ -134,3 +134,137 @@
   color: #007bff;
   font-size: 0.9em;
 }
+
+.image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.blurred-image {
+  width: 90vw;
+  height: 400px;
+  object-fit: cover;
+  filter: blur(3px);
+  border-radius: 8px;
+  margin: 0 auto;
+  display: block;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 20;
+  background: rgba(54, 58, 62, 0.9);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-button:hover {
+  background: rgba(118, 118, 118, 0.9);
+}
+.store-detail-header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 24px;
+  min-width: 300px;
+  max-width: 80%;
+}
+
+.store-detail-header h2 {
+  margin: 0 0 8px 0;
+  color: #333;
+}
+
+.store-detail-header p {
+  margin: 0 0 8px 0;
+  color: #666;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.product-item {
+  border-radius: 8px;
+  padding: 16px;
+  width: 350px;
+  min-height: 350px;
+  background-color: #ffffff14;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-item .item-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-item .item-info h3 {
+  margin: 0 0 8px 0;
+  color: #ffffff;
+}
+
+.product-item .item-info p:not(.price) {
+  flex-grow: 1;
+}
+
+.product-item img {
+  max-height: 3000px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.price { 
+  color: white;
+  display: inline-block;
+  width: fit-content;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: auto;
+  align-self: center;
+}
+
+.review-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.review-item {
+  width: 1000px;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #ffffff14;
+  margin: 12px;
+}
+
+.review-item img {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
