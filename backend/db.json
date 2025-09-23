@@ -6,7 +6,7 @@
       "name": "Máquina Monster",
       "description": "Máquina expendedora de bebidas energéticas Monster.",
       "location": "Patio de 851, cerca de la entrada",
-      "images": ["/images/library-vending-1.jpg", "/images/monster-851.jpg"],
+      "images": ["/images/stores/monster-851.jpg"],
       "junaeb": false
     },
     {
@@ -15,7 +15,7 @@
       "name": "Almacén Buen Pan",
       "description": "Venta de snacks, bebidas, pancitos y almuerzos ligeros.",
       "location": "Almirante Blanco Encalada 2111",
-      "images": ["/images/buenpan.jpg"],
+      "images": ["/images/stores/buenpan.jpg"],
       "junaeb": true
     },
     {
@@ -24,7 +24,7 @@
       "name": "Cafeta",
       "description": "Cafetería universitaria con opciones de comida rápida y saludable.",
       "location": "Beauchef 850, piso -1, cerca del patio central",
-      "images": ["/images/cafeta.jpg"],
+      "images": ["/images/stores/cafeta.jpg"],
       "junaeb": true
     },
     {
@@ -33,7 +33,7 @@
       "name": "Abuelita Yoli",
       "description": "Carrito de comida rápida, aceptamos junaeb.",
       "location": "Patio de 850, junto a la entrada principal",
-      "images": ["/images/abuelitaYoli.jpg"],
+      "images": ["/images/stores/abuelitaYoli.jpg"],
       "junaeb": true
     },
     {
@@ -42,7 +42,7 @@
       "name": "Subway",
       "description": "Cadena internacional de sándwiches personalizados.",
       "location": "Tupper 2103",
-      "images": ["/images/subway.jpg"],
+      "images": ["/images/stores/subway.jpg"],
       "junaeb": true
     }
   ],
