@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import server from "../services/server";
-import type { StoreWithDetails } from "../types/types";
+import type { StoreWithDetails, StoreReview } from "../types/types";
+import ReviewForm from "./ReviewForm";
 
 interface StoreDetailsProps {
     storeId: number;
@@ -11,6 +12,7 @@ const StoreDetails: React.FC<StoreDetailsProps> = ({ storeId, onBack }) => {
     const [store, setStore] = useState<StoreWithDetails | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+    const [showReviewForm, setShowReviewForm] = useState(false);
 
     const renderStars = (rating: number) => {
         const fullStars = Math.floor(rating);
@@ -32,6 +34,24 @@ const StoreDetails: React.FC<StoreDetailsProps> = ({ storeId, onBack }) => {
             ))}
         </>
         );
+    };
+
+    const handleReviewAdded = (newReview: StoreReview) => {
+        if (store) {
+            const updatedReviews = [...store.reviews, newReview];
+            const newAverageRating = updatedReviews.reduce((sum, review) => sum + review.rating, 0) / updatedReviews.length;
+            
+            setStore({
+                ...store,
+                reviews: updatedReviews,
+                averageRating: Math.round(newAverageRating * 10) / 10
+            });
+        }
+        setShowReviewForm(false);
+    };
+
+    const handleCancelReview = () => {
+        setShowReviewForm(false);
     };
 
     useEffect(() => {
@@ -75,7 +95,7 @@ const StoreDetails: React.FC<StoreDetailsProps> = ({ storeId, onBack }) => {
                 />
                 
                 <button onClick={onBack} className="back-button">
-                    ← Back to Stores
+                    ← Volver a la lista
                 </button>
                 
                 <div className="store-detail-header">
@@ -134,7 +154,7 @@ const StoreDetails: React.FC<StoreDetailsProps> = ({ storeId, onBack }) => {
                 </div>
             )}
 
-            {store.reviews && store.reviews.length > 0 && (
+            {store.reviews && store.reviews.length > 0 ? (
                 <div>
                     <h2>Reseñas</h2>
                     <div className="review-container">
@@ -161,7 +181,32 @@ const StoreDetails: React.FC<StoreDetailsProps> = ({ storeId, onBack }) => {
                             </div>
                         ))}
                     </div>
+                    <button 
+                        className="add-review-button"
+                        onClick={() => setShowReviewForm(true)}
+                    >
+                        ➕ Agregar Reseña
+                    </button>
                 </div>
+            ) : (
+                <div>
+                    <h2>Reseñas</h2>
+                    <p className="no-reviews">¡Sé el primero en dejar una reseña!</p>
+                    <button 
+                        className="add-review-button"
+                        onClick={() => setShowReviewForm(true)}
+                    >
+                        Agregar Reseña
+                    </button>
+                </div>
+            )}
+
+            {showReviewForm && (
+                <ReviewForm
+                    storeId={storeId}
+                    onReviewAdded={handleReviewAdded}
+                    onCancel={handleCancelReview}
+                />
             )}
         </div>
     );
