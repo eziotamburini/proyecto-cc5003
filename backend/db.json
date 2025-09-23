@@ -1,54 +1,64 @@
 {
   "stores": [
     {
-      "id": 1,
+      "id": "1",
       "storeCategory": "Máquina Expendedora",
       "name": "Máquina Monster",
       "description": "Máquina expendedora de bebidas energéticas Monster.",
       "location": "Patio de 851, cerca de la entrada",
-      "images": ["/images/stores/monster-851.jpg"],
+      "images": [
+        "/images/stores/monster-851.jpg"
+      ],
       "junaeb": false
     },
     {
-      "id": 2,
+      "id": "2",
       "storeCategory": "Minimarket",
       "name": "Almacén Buen Pan",
       "description": "Venta de snacks, bebidas, pancitos y almuerzos ligeros.",
       "location": "Almirante Blanco Encalada 2111",
-      "images": ["/images/stores/buenpan.jpg"],
+      "images": [
+        "/images/stores/buenpan.jpg"
+      ],
       "junaeb": true
     },
     {
-      "id": 3,
+      "id": "3",
       "storeCategory": "Cafetería",
       "name": "Cafeta",
       "description": "Cafetería universitaria con opciones de comida rápida y saludable.",
       "location": "Beauchef 850, piso -1, cerca del patio central",
-      "images": ["/images/stores/cafeta.jpg"],
+      "images": [
+        "/images/stores/cafeta.jpg"
+      ],
       "junaeb": true
     },
     {
-      "id": 4,
+      "id": "4",
       "storeCategory": "Food Truck",
       "name": "Abuelita Yoli",
       "description": "Carrito de comida rápida, aceptamos junaeb.",
       "location": "Patio de 850, junto a la entrada principal",
-      "images": ["/images/stores/abuelitaYoli.jpg"],
+      "images": [
+        "/images/stores/abuelitaYoli.jpg"
+      ],
       "junaeb": true
     },
     {
-      "id": 5,
+      "id": "5",
       "storeCategory": "Restaurante",
       "name": "Subway",
       "description": "Cadena internacional de sándwiches personalizados.",
       "location": "Tupper 2103",
-      "images": ["/images/stores/subway.jpg"],
+      "images": [
+        "/images/stores/subway.jpg"
+      ],
       "junaeb": true
     }
   ],
   "storeItems": [
     {
-      "id": 101,
+      "id": "101",
       "name": "Monster Energy Original",
       "storeId": 1,
       "description": "La bebida energética clásica de lata verde.",
@@ -56,7 +66,7 @@
       "price": 2000
     },
     {
-      "id": 102,
+      "id": "102",
       "name": "Monster Mango Loco",
       "storeId": 1,
       "description": "Sabor tropical a mango.",
@@ -64,7 +74,7 @@
       "price": 2000
     },
     {
-      "id": 103,
+      "id": "103",
       "name": "Pan Amasado con Queso",
       "storeId": 2,
       "description": "Pan recién horneado con queso derretido.",
@@ -72,7 +82,7 @@
       "price": 1500
     },
     {
-      "id": 104,
+      "id": "104",
       "name": "Coca-Cola 500ml",
       "storeId": 2,
       "description": "Bebida de fantasía clásica.",
@@ -80,7 +90,7 @@
       "price": 1200
     },
     {
-      "id": 105,
+      "id": "105",
       "name": "Menú del Día",
       "storeId": 3,
       "description": "Plato de fondo, ensalada, pan y bebida. Cambia a diario.",
@@ -88,7 +98,7 @@
       "price": 4200
     },
     {
-      "id": 106,
+      "id": "106",
       "name": "Café Americano",
       "storeId": 3,
       "description": "Café de grano recién preparado.",
@@ -96,7 +106,7 @@
       "price": 1800
     },
     {
-      "id": 107,
+      "id": "107",
       "name": "Sándwich Ave Palta",
       "storeId": 3,
       "description": "Sándwich de pasta de pollo con palta en pan de molde.",
@@ -104,7 +114,7 @@
       "price": 2800
     },
     {
-      "id": 108,
+      "id": "108",
       "name": "Completo Italiano",
       "storeId": 4,
       "description": "Vienesa con tomate, palta y mayonesa.",
@@ -112,7 +122,7 @@
       "price": 2500
     },
     {
-      "id": 109,
+      "id": "109",
       "name": "Empanada de Pino",
       "storeId": 4,
       "description": "Empanada de pino de carne, horneada.",
@@ -120,7 +130,7 @@
       "price": 2200
     },
     {
-      "id": 110,
+      "id": "110",
       "name": "Sándwich Italiano B.M.T.",
       "storeId": 5,
       "description": "Sándwich con pepperoni, salami y jamón. Tamaño de 15 cm.",
@@ -128,7 +138,7 @@
       "price": 4800
     },
     {
-      "id": 111,
+      "id": "111",
       "name": "Sándwich de Pollo Teriyaki",
       "storeId": 5,
       "description": "Pollo en salsa teriyaki con vegetales a elección.",
@@ -136,7 +146,7 @@
       "price": 4600
     },
     {
-      "id": 112,
+      "id": "112",
       "name": "Galleta con chips de chocolate",
       "storeId": 5,
       "description": "Galleta horneada estilo americano.",
@@ -146,53 +156,79 @@
   ],
   "storeReviews": [
     {
-      "id": 201,
+      "id": "201",
       "storeId": 1,
       "rating": 5,
       "comment": "¡Salvadora! Siempre me saca de apuros antes de una prueba.",
       "userName": "mechona_estresada"
     },
     {
-      "id": 202,
+      "id": "202",
       "storeId": 2,
       "rating": 4,
       "comment": "Los pancitos son muy ricos y la atención es buena. Un poco caro a veces.",
       "userName": "juanito_perez"
     },
     {
-      "id": 203,
+      "id": "203",
       "storeId": 3,
       "rating": 3,
       "comment": "La comida es buena para el precio, pero la fila a la hora de almuerzo es eterna. Hay que ir con tiempo.",
       "picture": "/images/reviews/review-fila-cafeta.jpg"
     },
     {
-      "id": 204,
+      "id": "204",
       "storeId": 4,
       "rating": 5,
       "comment": "La tía Yoli es la mejor, sus completos son un 10/10. ¡Y que acepte Junaeb es lo máximo!",
       "userName": "el_completista"
     },
     {
-      "id": 205,
+      "id": "205",
       "storeId": 5,
       "rating": 4,
       "comment": "Es Subway, ya sabes lo que vas a encontrar. Confiable y rápido.",
       "userName": "ana_g"
     },
     {
-      "id": 206,
+      "id": "206",
       "storeId": 3,
       "rating": 4,
       "comment": "El café de la mañana me da la vida. Podrían tener más opciones de leche vegetal.",
       "userName": "sofia.coffee.lover"
     },
     {
-      "id": 207,
+      "id": "207",
       "storeId": 4,
       "rating": 4,
       "comment": "Las empanadas son de otro nivel, pero a veces se le acaban muy rápido.",
       "picture": "/images/reviews/review-empanada.jpg"
+    },
+    {
+      "id": "43b5",
+      "storeId": 1,
+      "rating": 1,
+      "comment": "Me estafaron más de una vez):",
+      "userName": "UsuarioTriste"
+    },
+    {
+      "id": "929e",
+      "storeId": "1",
+      "rating": 5,
+      "comment": "Agregaron sabores! Me gusta el de mango :D"
+    },
+    {
+      "id": "2119",
+      "storeId": "1",
+      "rating": 4,
+      "comment": "La de mango es lo mejor!",
+      "picture": "https://mobileimages.lowes.com/productimages/db5a45df-8d04-4405-91cc-6b269324f8fb/68442825.jpeg"
+    },
+    {
+      "id": "66bf",
+      "storeId": "5",
+      "rating": 3,
+      "comment": "Mucha fila y no siempre los hacen bien):"
     }
   ]
 }
