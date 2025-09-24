@@ -1,30 +1,19 @@
-import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 import StoreList from "./components/StoreList";
 import StoreDetails from "./components/StoreDetails";
 
 function App() {
-  const [selectedStoreId, setSelectedStoreId] = useState<number | null>(null);
-
-  const handleStoreSelect = (storeId: number) => {
-    setSelectedStoreId(storeId);
-  };
-
-  const handleBackToList = () => {
-    setSelectedStoreId(null);
-  };
-
   return (
-    <div className="App">
-      {selectedStoreId ? (
-        <StoreDetails 
-          storeId={selectedStoreId} 
-          onBack={handleBackToList} 
-        />
-      ) : (
-        <StoreList onStoreSelect={handleStoreSelect} />
-      )}
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<StoreList />} />
+          <Route path="/store/:storeId" element={<StoreDetails />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

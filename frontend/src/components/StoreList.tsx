@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import server from "../services/server";
 import type { StoreWithRating } from "../types/types";
 
-interface StoreListProps {
-  onStoreSelect: (storeId: number) => void;
-}
-
-const StoreList: React.FC<StoreListProps> = ({ onStoreSelect }) => {
+const StoreList: React.FC = () => {
   const [stores, setStores] = useState<StoreWithRating[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   const renderStars = (rating: number) => {
     const fullStars = Math.floor(rating);
@@ -31,6 +29,10 @@ const StoreList: React.FC<StoreListProps> = ({ onStoreSelect }) => {
         ))}
       </>
     );
+  };
+
+  const handleStoreSelect = (storeId: number) => {
+    navigate(`/store/${storeId}`);
   };
 
   useEffect(() => {
@@ -64,13 +66,13 @@ const StoreList: React.FC<StoreListProps> = ({ onStoreSelect }) => {
           <li 
             key={store.id} 
             className="store-item"
-            onClick={() => onStoreSelect(store.id)}
+            onClick={() => handleStoreSelect(store.id)}
             style={{ cursor: 'pointer' }}
             role="button"
             tabIndex={0}
             onKeyDown={(e) => {
               if (e.key === 'Enter' || e.key === ' ') {
-                onStoreSelect(store.id);
+                handleStoreSelect(store.id);
               }
             }}
           >

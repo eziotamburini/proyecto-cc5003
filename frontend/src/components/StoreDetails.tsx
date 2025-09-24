@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import server from "../services/server";
 import type { StoreWithDetails, StoreReview } from "../types/types";
 import ReviewForm from "./ReviewForm";
 
-interface StoreDetailsProps {
-    storeId: number;
-    onBack: () => void;
-}
-
-const StoreDetails: React.FC<StoreDetailsProps> = ({ storeId, onBack }) => {
+const StoreDetails: React.FC = () => {
+    const { storeId } = useParams<{ storeId: string }>();
+    const navigate = useNavigate();
     const [store, setStore] = useState<StoreWithDetails | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [showReviewForm, setShowReviewForm] = useState(false);
+
+    const handleBack = () => {
+        navigate('/');
+    };
 
     const renderStars = (rating: number) => {
         const fullStars = Math.floor(rating);
@@ -56,9 +58,11 @@ const StoreDetails: React.FC<StoreDetailsProps> = ({ storeId, onBack }) => {
 
     useEffect(() => {
         const fetchStoreDetails = async () => {
+            if (!storeId) return;
+            
             try {
                 setLoading(true);
-                const data = await server.getStoreWithDetails(storeId);
+                const data = await server.getStoreWithDetails(Number(storeId));
                 setStore(data);
             } catch {
                 setError("Failed to load store details");
@@ -94,7 +98,7 @@ const StoreDetails: React.FC<StoreDetailsProps> = ({ storeId, onBack }) => {
                     }}
                 />
                 
-                <button onClick={onBack} className="back-button">
+                <button onClick={handleBack} className="back-button">
                     ← Volver a la lista
                 </button>
                 
@@ -203,7 +207,7 @@ const StoreDetails: React.FC<StoreDetailsProps> = ({ storeId, onBack }) => {
 
             {showReviewForm && (
                 <ReviewForm
-                    storeId={storeId}
+                    storeId={Number(storeId)}
                     onReviewAdded={handleReviewAdded}
                     onCancel={handleCancelReview}
                 />
